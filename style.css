@@ -56,6 +56,12 @@ a { color: var(--moon); text-decoration-color: var(--tertiary); text-underline-o
 .links a::after { content: "›"; float: right; color: var(--tertiary); }
 footer { padding-top: 32px; padding-bottom: 56px; color: var(--tertiary); font-size: 12px; letter-spacing: 0.1em; }
 footer a { color: var(--secondary); text-decoration: none; margin-right: 18px; }
+footer .other { float: right; margin-right: 0; }
+[lang="en"] { letter-spacing: 0.01em; }
+html[lang="en"] body { line-height: 1.7; }
+html[lang="en"] h1 { letter-spacing: 0.04em; }
+html[lang="en"] h2 { letter-spacing: 0.03em; }
+html[lang="en"] header span { letter-spacing: 0.06em; }
 @media (max-width: 380px) {
   main, header, footer { padding-left: 22px; padding-right: 22px; }
   .item dl { grid-template-columns: 1fr; }
