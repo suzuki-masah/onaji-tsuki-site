@@ -1,0 +1,63 @@
+@font-face { font-family: "Shippori Mincho"; font-weight: 500; font-display: swap; src: url("fonts/ShipporiMincho-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Shippori Mincho"; font-weight: 600; font-display: swap; src: url("fonts/ShipporiMincho-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Zen Kaku Gothic New"; font-weight: 400; font-display: swap; src: url("fonts/ZenKakuGothicNew-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Zen Kaku Gothic New"; font-weight: 500; font-display: swap; src: url("fonts/ZenKakuGothicNew-Medium.woff2") format("woff2"); }
+
+:root {
+  color-scheme: dark;
+  --ground: #0B0C0F;
+  --moon: #EEE9DD;
+  --secondary: #A39F96;
+  --tertiary: #87837C;
+  --hairline: rgba(238, 233, 221, 0.12);
+  --sheet: #15171C;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--moon);
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  font-feature-settings: "palt" 0;
+}
+main, header, footer { max-width: 640px; margin: 0 auto; padding: 0 28px; }
+header { padding-top: 40px; }
+header a { display: inline-flex; align-items: center; gap: 12px; color: var(--moon); text-decoration: none; }
+header img { width: 36px; height: 36px; border-radius: 8px; }
+header span { font-family: "Shippori Mincho", serif; font-weight: 500; font-size: 16px; letter-spacing: 0.16em; }
+main { padding-top: 32px; padding-bottom: 24px; }
+h1, h2, .app-name { font-family: "Shippori Mincho", serif; font-weight: 600; }
+h1 { font-size: 26px; line-height: 1.5; letter-spacing: 0.16em; margin: 0 0 8px; }
+h2 { font-size: 18px; font-weight: 500; line-height: 1.6; letter-spacing: 0.12em; margin: 44px 0 12px; padding-top: 28px; border-top: 1px solid var(--hairline); }
+p { margin: 0 0 14px; }
+.date { color: var(--secondary); font-size: 13px; margin-bottom: 28px; }
+ul { margin: 0 0 14px; padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+strong { font-weight: 500; }
+a { color: var(--moon); text-decoration-color: var(--tertiary); text-underline-offset: 3px; word-break: break-all; }
+.items { margin: 4px 0 18px; }
+.item { padding: 16px 0; border-bottom: 1px solid var(--hairline); }
+.item:first-child { border-top: 1px solid var(--hairline); }
+.item-title { font-weight: 500; margin: 0 0 6px; }
+.item dl { margin: 0; display: grid; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 4px; }
+.item dt { color: var(--secondary); font-size: 13px; padding-top: 1px; white-space: nowrap; }
+.item dd { margin: 0; }
+.app-icon { display: block; width: 72px; height: 72px; border-radius: 16px; margin: 40px 0 20px; }
+.app-name { font-size: 30px; letter-spacing: 0.2em; margin-bottom: 16px; }
+.links + h2 { border-top: 0; padding-top: 0; }
+.links { list-style: none; padding: 0; margin: 28px 0 0; }
+.links li { border-top: 1px solid var(--hairline); margin: 0; }
+.links li:last-child { border-bottom: 1px solid var(--hairline); }
+.links a { display: block; padding: 14px 0; text-decoration: none; font-size: 16px; letter-spacing: 0.08em; }
+.links a::after { content: "›"; float: right; color: var(--tertiary); }
+footer { padding-top: 32px; padding-bottom: 56px; color: var(--tertiary); font-size: 12px; letter-spacing: 0.1em; }
+footer a { color: var(--secondary); text-decoration: none; margin-right: 18px; }
+@media (max-width: 380px) {
+  main, header, footer { padding-left: 22px; padding-right: 22px; }
+  .item dl { grid-template-columns: 1fr; }
+  .item dt { padding-top: 6px; }
+}
